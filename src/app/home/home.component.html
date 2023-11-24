@@ -1,0 +1,82 @@
+<nav id="sidebar">
+  <div class="text-center">
+    <i class="fas fa-bars fa-2x" (click)="toggle('')"></i>
+  </div>
+  <br>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="toggle('Inicio')">
+        <i class="fas fa-home"></i> Personal
+      </a>
+      <ul class="nav flex-column ml-3" *ngIf="isInicioOpen">
+        <!-- Contenido del desplegable "Personal" -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Noticias</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="toggle('Estadisticas')">
+        <i class="fas fa-chart-bar"></i> Publicaciones
+      </a>
+      <ul class="nav flex-column ml-3" *ngIf="isEstadisticasOpen">
+        <!-- Contenido del desplegable "Publicaciones" -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Matriz general</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Articulos científicos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Documentos</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reportes</a> 
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="toggle('Perfil')">
+        <i class="fas fa-user"></i> Documentacion
+      </a>
+      <ul class="nav flex-column ml-3" *ngIf="isPerfilOpen">
+        <!-- Contenido del desplegable "Documentacion" -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Presentaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bienes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Documentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Formatos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Proformas equipos</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="toggle('Configuracion')">
+        <i class="fas fa-cog"></i> Proyectos 
+      </a>
+      <ul class="nav flex-column ml-3" *ngIf="isConfiguracionOpen">
+        <!-- Contenido del desplegable "Proyectos" -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Matriz general</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Documentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reportes</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

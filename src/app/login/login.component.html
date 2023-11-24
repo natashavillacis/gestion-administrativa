@@ -1,0 +1,47 @@
+<div class="body">
+  <div class="container login-container col-md-3">
+    <img src="./assets/Imagenes/logo-episig-01-300x105.png" alt="Logo" class="mb-4">
+
+    <h2 class="mb-6">Iniciar Sesión</h2>
+
+    <form (ngSubmit)="login()">
+      <div class="pb-3">
+        <input type="email" class="form-control" placeholder="Correo electrónico" required [(ngModel)]="email" name="email">
+      </div>
+
+      <div class="pb-3">
+        <div class="input-group">
+          <input id="passwordInput" type="password" class="form-control" placeholder="Contraseña" required [(ngModel)]="password" name="password">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword" (click)="togglePassword()">
+              <i class="fa fa-eye"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-dark btn-lg btn-block">Iniciar Sesión</button>
+    </form>
+    
+    <div class="mt-5">
+      <a href="#" class="small text-muted">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <div class="mt-2" *ngIf="showErrorMessage">
+      <p class="text-danger">Campo obligatorio</p>
+    </div>
+
+    <script>
+      document.getElementById('togglePassword').addEventListener('click', function () {
+        var passwordInput = document.getElementById('passwordInput');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+        } else {
+          passwordInput.type = 'password';
+        }
+      });
+    </script>
+  </div>
+</div>
+
+
